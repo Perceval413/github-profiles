@@ -5,6 +5,7 @@
     
 }
 
+/*estilo general */
 body{
     background-color: #2a2a72;
     background-image: linear-gradient(315deg, #2a2a72 0%, #2e2a68 74%);
@@ -18,6 +19,7 @@ body{
 
 }
 
+/* estilo del cuadro de busqueda */
 input{
     background-color: #4c2885;
     border-radius: 10px;
@@ -39,6 +41,8 @@ input:focus{
     outline: none;
 }
 
+
+/*estilo de la card */
 .card{
     background-color: #4c2885;
     background-image: linear-gradient(315deg, #4c2885 0%, #4c11ac 100%);
@@ -51,7 +55,7 @@ input:focus{
   
 }
 
-
+/*estilo de la imagen */
 .avatar{
    border: 10px solid #2a2a72;
    border-radius: 50%;
@@ -69,6 +73,7 @@ input:focus{
     margin-top: 0;
 }
 
+/*estilo de la lista */
 .user-info ul{
     display: flex;
     justify-content: space-between;
@@ -87,6 +92,7 @@ input:focus{
     margin-left: 0.5rem;
 }
 
+/*estilo del repo */
 .repo{
     background-color: #2a2a72;
     display: inline-block;

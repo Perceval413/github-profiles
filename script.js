@@ -6,6 +6,7 @@ const search = document.getElementById("search");
 
 getUser("florinpop17");
 
+//funcion para conseguir el usuario, crear la card y los repos
 async function getUser(username){
   const resp = await fetch(APIURL+username);
   const respData = await resp.json();
@@ -15,12 +16,16 @@ async function getUser(username){
   getRepos(username);
 }
 
+
+//funcion para conseguir los repos del usuario
 async function getRepos(username){
   const resp = await fetch(APIURL+username+"/repos");
   const respData = await resp.json();
   addReposToCard(respData);
 }
 
+
+//funcion para crear la card
 function createUserCard(user){
 
   const cardHTML = `
@@ -47,6 +52,7 @@ function createUserCard(user){
   main.innerHTML= cardHTML;
 }
 
+//funcion para crear los repos
 function addReposToCard(repos) {
   const reposEl = document.getElementById("repos");
 
@@ -65,6 +71,8 @@ function addReposToCard(repos) {
       });
 }
 
+
+//
 form.addEventListener("submit",(e)=>{
   e.preventDefault();
   const user = search.value;
